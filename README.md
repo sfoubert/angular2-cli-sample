@@ -1,10 +1,13 @@
-# Demo
-
-https://sfoubert.github.io/angular2-cli-sample/
-
 # Angular2CliSample
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.28.3.
+
+## Demo
+
+### Github
+https://sfoubert.github.io/angular2-cli-sample/
+### Firebase
+https://angular2-cli-sample.firebaseapp.com
 
 ## Development server
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
