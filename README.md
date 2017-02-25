@@ -1,3 +1,7 @@
+# Demo
+
+https://sfoubert.github.io/angular2-cli-sample/
+
 # Angular2CliSample
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.28.3.
