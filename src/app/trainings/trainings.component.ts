@@ -8,10 +8,10 @@ import { AngularFire, FirebaseListObservable } from 'angularfire2/index';
 })
 export class TrainingsComponent implements OnInit {
 
-  trainings: FirebaseListObservable<any>;
+  trainings: {};//FirebaseListObservable<any>;
 
   constructor(private af: AngularFire) {
-    this.trainings = af.database.list('trainings');
+    // this.trainings = af.database.list('trainings');
   }
 
   ngOnInit() {
