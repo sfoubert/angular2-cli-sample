@@ -13,8 +13,10 @@ import { MaterialModule } from '@angular/material';
 import { AppComponent } from './app.component';
 import { TrainingsComponent } from './trainings/trainings.component';
 import { TodosComponent } from './todos/todos.component';
+import { MoviesComponent } from './movies/movies.component';
 
 const appRoutes:Routes = [
+  {path : 'movies', component: MoviesComponent},
   {path : 'trainings', component: TrainingsComponent},
   {path : 'todos', component: TodosComponent},
   {path : '**', component: TrainingsComponent}
@@ -24,7 +26,8 @@ const appRoutes:Routes = [
   declarations: [
     AppComponent,
     TrainingsComponent,
-    TodosComponent
+    TodosComponent,
+    MoviesComponent
   ],
   imports: [
     BrowserModule,
