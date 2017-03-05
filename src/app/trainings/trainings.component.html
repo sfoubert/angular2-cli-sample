@@ -1,9 +1,9 @@
-<md-list>
-  <h3 md-subheader>Trainings</h3>
-  <md-list-item *ngFor="let training of trainings | async">
-    <md-icon md-list-avatar>folder</md-icon>
-    <h4 md-line>{{training.type}}</h4>
-    <p md-line class="demo-2">Distance : {{training.distance}}kms</p>
-    <p md-line class="demo-2">Time : {{training.time}}min</p>
-  </md-list-item>
-</md-list>
+<ul>
+  <li *ngFor="let training of trainings | async">
+    <ul>
+      <li>Type : {{ training.type }}</li>
+      <li>Distance : {{ training.distance }}</li>
+      <li>Time : {{ training.time }}</li>
+    </ul>
+  </li>
+</ul>

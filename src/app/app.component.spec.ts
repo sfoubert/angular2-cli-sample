@@ -3,10 +3,19 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { TrainingsComponent } from './trainings/trainings.component';
+import { TodosComponent } from './todos/todos.component';
+import { MoviesComponent } from './movies/movies.component';
 
 import { AngularFireModule } from 'angularfire2/index';
+import { RouterModule, Routes } from '@angular/router';
 import { firebaseConfig } from './../../firebase.config';
-import { MaterialModule } from '@angular/material';
+
+const appRoutes:Routes = [
+  {path : 'movies', component: MoviesComponent},
+  {path : 'trainings', component: TrainingsComponent},
+  {path : 'todos', component: TodosComponent},
+  {path : '**', component: TrainingsComponent}
+];
 
 describe('AppComponent', () => {
   beforeEach(() => {
@@ -16,8 +25,8 @@ describe('AppComponent', () => {
         TrainingsComponent
       ],
       imports: [
-        AngularFireModule.initializeApp(firebaseConfig),
-        MaterialModule.forRoot()
+        RouterModule.forRoot(appRoutes),
+        AngularFireModule.initializeApp(firebaseConfig)
       ]
     });
     TestBed.compileComponents();
