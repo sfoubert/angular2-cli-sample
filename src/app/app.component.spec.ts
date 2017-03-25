@@ -9,6 +9,8 @@ import { MoviesComponent } from './movies/movies.component';
 import { AngularFireModule } from 'angularfire2/index';
 import { RouterModule, Routes } from '@angular/router';
 import { firebaseConfig } from './../../firebase.config';
+import { HttpModule } from '@angular/http';
+import {APP_BASE_HREF} from "@angular/common";
 
 const appRoutes:Routes = [
   {path : 'movies', component: MoviesComponent},
@@ -22,11 +24,17 @@ describe('AppComponent', () => {
     TestBed.configureTestingModule({
       declarations: [
         AppComponent,
-        TrainingsComponent
+        TrainingsComponent,
+        MoviesComponent,
+        TodosComponent,
       ],
       imports: [
+        HttpModule,
         RouterModule.forRoot(appRoutes),
-        AngularFireModule.initializeApp(firebaseConfig)
+        AngularFireModule.initializeApp(firebaseConfig),
+      ],
+      providers: [
+        {provide: APP_BASE_HREF, useValue: '/'}
       ]
     });
     TestBed.compileComponents();

@@ -1,9 +1,9 @@
 /* tslint:disable:no-unused-variable */
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
-import { DebugElement } from '@angular/core';
-
+import { AngularFireModule } from 'angularfire2/index';
 import { TrainingsComponent } from './trainings.component';
+import {firebaseConfig} from "../../../firebase.config";
+import {HttpModule} from "@angular/http";
 
 describe('TrainingsComponent', () => {
   let component: TrainingsComponent;
@@ -11,7 +11,11 @@ describe('TrainingsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TrainingsComponent ]
+      declarations: [ TrainingsComponent ],
+      imports: [
+        HttpModule,
+        AngularFireModule.initializeApp(firebaseConfig),
+      ]
     })
     .compileComponents();
   }));
